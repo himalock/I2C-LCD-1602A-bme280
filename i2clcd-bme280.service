@@ -1,0 +1,11 @@
+[Unit]
+Description=I2C 1602A LCD for BME280
+After=local-fs.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/lcd-bme280.py
+Restart=yes
+
+[Install]
+WantedBy=multi-user.target
